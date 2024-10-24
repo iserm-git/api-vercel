@@ -19,9 +19,4 @@ app.use("/api/evaluations", evaluationRoutes);
 app.use("/api/teachers", teacherRoutes); // Ruta de docentes
 app.use("/api/students", studentRoutes); // Ruta de alumnos
 
-// Puerto de la aplicación
-const PORT = process.env.PORT || 5001;
-
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
+module.exports = app; // Exportar la app para que Vercel la use
